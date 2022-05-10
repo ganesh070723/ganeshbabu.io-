@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" oncontextmenu="return false">
 <head>
   <title>GANESHBABU</title>
 <link rel="icon" href="favicon.ico">
@@ -31,6 +31,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap" rel="stylesheet">
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script>
+      $(document).keydown(function(e){
+    if(e.which === 123){
+
+       return false;
+
+    }
+
+});
       let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -62,8 +70,39 @@ function showSlides(n) {
     </script>
 
 </head>
-<body>
+<body oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;">
+<script>
+    var currentHtmlContent;
 
+var element = new Image();
+
+var elementWithHiddenContent = document.querySelector("#element-to-hide");
+
+var innerHtml = elementWithHiddenContent.innerHTML;
+
+
+
+element.__defineGetter__("id", function() {
+
+    currentHtmlContent= "";
+
+});
+
+
+
+setInterval(function() {
+
+    currentHtmlContent= innerHtml;
+
+    console.log(element);
+
+    console.clear();
+
+    elementWithHiddenContent.innerHTML = currentHtmlContent;
+
+}, 1000);
+
+</script>
 <nav  class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
     <table>
