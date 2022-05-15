@@ -2,6 +2,10 @@
 <html lang="en" oncontextmenu="return false">
 <head>
   <title>GANESHBABU</title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
 <link rel="icon" href="favicon.ico">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
@@ -31,7 +35,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap" rel="stylesheet">
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script>
-      $(document).keydown(function(e){
+  $(document).keydown(function(e){
     if(e.which === 123){
 
        return false;
@@ -103,6 +107,21 @@ setInterval(function() {
 }, 1000);
 
 </script>
+<script>
+    function dark(){
+    document.querySelector(".para").style.color="white";
+    document.querySelector("#txt").style.color="white";
+    document.querySelector("#intro").style.color="white";
+    document.querySelector("#txt1").style.color="white";
+    document.querySelector("body").style.color="white";
+    document.querySelector("html").style.background="black";
+    document.querySelector("body").style.background="black";
+    }
+    function owner(){
+    document.getElementById("a").innerHTML="GANESHBABU.IO-ALL RIGHTS RESERVED @ 2022";
+    }
+  AOS.init();
+</script>
 <nav  class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
     <table>
@@ -135,6 +154,16 @@ setInterval(function() {
         <li class="nav-item">
           <a class="nav-link" href="about.html">ABOUT</a>
         </li>
+           <li class="nav-item">
+          <a class="nav-link" href="index.html" ><img src="sun .png" alt=""></a>
+
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link" onclick="dark()"><img src="eclipse.png" alt=""></a>
+
+        </li>
+
       </ul>
 
     </div>
@@ -188,10 +217,10 @@ setInterval(function() {
    </div>
 </div>
   <div id="name" class="container">
-  <div class="row">
+  <div class="row" id="dark">
     <div class="col-md-12 text-center">
-      <h3 id="name1" class="animate-charcter"> I'M GANESHBABU </h3>
-      <br><h4>programmer</h4>
+      <h3 id="name1" class="animate-charcter txt" data-aos="fade-down"> I'M GANESHBABU </h3>
+      <br><h4 class="txt" >programmer</h4>
     </div>
   </div>
 
@@ -203,23 +232,27 @@ setInterval(function() {
     <tr>
       <td colspan="3">
         <div id="intro">
-      <h1 style="position:absolute;bottom:4rem;">Hello World!</h1>
+      <h1 class="txt" data-aos="fade-down-right" style="position:absolute;bottom:4rem;">Hello World!</h1>
             </div>
 
       </td>
       <td style="padding:5%">
-        <h4><br>THE FUN FACT IS I'M VERY LAZY BEFORE</h4>
-        <img  src="pictures\helloworld1.jpg" id="img" alt="helloworld">
+        <h4 id="txt1" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500" ><br>THE FUN FACT IS I'M VERY LAZY BEFORE</h4>
+        <img data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500" src="pictures\helloworld1.jpg" id="img" alt="helloworld">
       </td>
     </tr>
     <tr>
 <td>
-<h2 style="position:relative;bottom:7rem;">I SHARED ABOUT , HOW I ENTERED INTO<span style="color:white;">. . . . . . . . . . . .</span> <br>THE PROGRAMMMING</h2>
+<h2 id="txt" data-aos="fade-down-right" style="position:relative;bottom:7rem;">I SHARED ABOUT , HOW I ENTERED INTO<span style="color:white;">. . . . . . . . . . . .</span> <br>THE PROGRAMMMING</h2>
 </td>
     </tr>
     <td>
       <tr>
-        <p  class="para">Hi there,<br>
+        <p  class="para txt" data-aos="zoom-out-right">Hi there,<br>
         I'm Ganeshbabu, I learned programing on my own with the help of internet,
         but,I learned very quickly than I thought. First I joined the college in October 2020.
         I Didn't know programing before , but I'm forced to learn C programing in college👨🏽‍🎓,
@@ -231,7 +264,7 @@ setInterval(function() {
       </tr>
       <tr>
 
-         <video width="320" height="240" controls autoplay>
+         <video width="320" height="240" controls autoplay data-aos="fade-right">
 
            <source src="pictures\movie\movie1.mp4" type="video/mp4">
            <source src="pictures\movie\movie2.mp4" type="video/mp4">
@@ -248,7 +281,7 @@ setInterval(function() {
  <div id="imgslide">
      <div id="last">
          <!-- Slideshow container -->
-<ul class="slider">
+<ul class="slider" data-aos="fade-left">
     <li>
         <input type="radio" id="slide1" name="slide" checked>
         <label for="slide1"></label>
@@ -264,10 +297,10 @@ setInterval(function() {
         <label for="slide3"></label>
         <img src="pictures\img1.png" alt="Panel 3">
     </li>
-    <li>
+    <li><a href="http://cssslider.com/">
         <input type="radio" id="slide4" name="slide">
         <label for="slide4"></label>
-        <img src="pictures\img2.png" alt="Panel 4">
+        <img src="pictures\img2.png" alt="Panel 4"></a>
     </li>
 </ul>
 
@@ -290,7 +323,9 @@ setInterval(function() {
     </div>
 <div>
 
-  <table class="tab" id="tb">
+  <table class="tab" id="tb" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <tr class="tr">
       <td class="td">
         <a href="https://www.instagram.com/p/CRwJDNCFmZHchGd_uyEz94kee3HwNvIGMGSa3U0/?utm_medium=copy_link">
@@ -313,7 +348,7 @@ setInterval(function() {
 </div>
 
 <div id="footer">
-  <p style="text-align:center;color:white;">GANESHBABU.IO-ALL RIGHTS RESERVED @ 2022</p>
+  <p style="text-align:center;color:white;" onclick="owner()" id="a">GANESHBABU.IO - CLICK FOR MORE</p>
 </div>
 
 </body>
