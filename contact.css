@@ -108,3 +108,8 @@ text-align: center;
 
 
         }
+@media screen and (max-width:600px) {
+        html {
+            width: 100vh;
+        }
+    }
